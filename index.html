@@ -25,7 +25,10 @@
             }
 
             function colourChange() {
-              this.style.backgroundColor = "#000000";
+              const redColor = Math.round(Math.random()*255);
+              const greenColor = Math.round(Math.random()*255);
+              const blueColor = Math.round(Math.random()*255);
+              this.style.backgroundColor = `RGB(${redColor}, ${greenColor}, ${blueColor})`;
               //  this.style.bacgroundColor = "#000000";
             }
         </script>
