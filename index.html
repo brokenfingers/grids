@@ -25,13 +25,13 @@
             
            
             function createNew() {
-                
+                boxInfo = [];
                 let boxNumber =Number.parseInt(prompt('Please enter the number of squares per side for the new grid.', '') ) ;
                 while(boxNumber == 0 || boxNumber > 100 || !Number.isInteger(boxNumber) || isNaN(boxNumber) ) {
                     if(isNaN(boxNumber)) {
                         return;
                     }
-                    boxNumber =Number.parseInt(prompt('Please enter the number less than 10000.', '') ) ;
+                    boxNumber =Number.parseInt(prompt('Please enter the number less than 100.', '') ) ;
   
                 }
               
