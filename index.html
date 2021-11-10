@@ -8,7 +8,26 @@
     <body>
         <div id="container"></div>
         <script>
+            const boxNumber =Number.parseInt(prompt('please enter grid line number', '') || 0) ;
+            const divContainer = document.querySelector('#container');
+            let boxMatrix = Math.round(Math.pow(boxNumber, 0.5));
+           
+            
+            const boxSize = 960 / boxMatrix-1;
+            
+            for(let i = 0; i<boxNumber; i++) {
+                const newDiv = document.createElement('div');
+                newDiv.classList.add('primaryStyle');
+                newDiv.style.width = boxSize+"px";
+                newDiv.style.height = boxSize+"px";
+                newDiv.addEventListener('mouseover', colourChange, {once:true})
+                divContainer.appendChild(newDiv);
+            }
 
+            function colourChange() {
+              this.style.backgroundColor = "#000000";
+              //  this.style.bacgroundColor = "#000000";
+            }
         </script>
     </body>
 </html>
